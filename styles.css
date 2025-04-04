@@ -54,4 +54,133 @@ body {
 }
 
 .navbar-right a:hover {
-    color: #666; /* Slightly
+    color: #666; /* Slightly lighter on hover */
+}
+
+.navbar-right a.active {
+    color: #666; /* Highlight the active page */
+}
+
+/* Main Content */
+main {
+    margin-top: 60px; /* Space for the fixed navbar */
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.features {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-item {
+    flex: 1 1 300px;
+    margin: 20px;
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h2 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer (Matching Atom.com) */
+footer {
+    background: #fff;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.footer-left span, .footer-left a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+.footer-right a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.bullet {
+    color: #666;
+    margin: 0 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-right {
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 0 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-left, .footer-right {
+        margin: 10px 0;
+    }
+    .feature-item {
+        flex: 1 1 100%;
+    }
+}
