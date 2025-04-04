@@ -8,7 +8,63 @@ body {
     line-height: 1.6;
 }
 
+/* Navigation Bar (Matching Atom.com) */
+.navbar {
+    background: #1a1a1a; /* Dark background like Atom.com */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.navbar-left span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navbar-right a:hover {
+    color: #ccc;
+}
+
+.navbar-right a.active {
+    color: #ccc; /* Highlight the active page */
+}
+
 /* Main Content */
+main {
+    margin-top: 60px; /* Space for the fixed navbar */
+}
+
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -106,6 +162,16 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-right {
+        margin-top: 10px;
+    }
+    .navbar-right a {
+        margin: 0 10px;
+    }
     .footer-container {
         flex-direction: column;
         text-align: center;
